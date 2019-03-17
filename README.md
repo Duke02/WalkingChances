@@ -15,3 +15,7 @@ directions: north, south, east, and west. Let S equal
 the east-west position and T the north-south position
 after n steps.
 ```
+
+## Environment
+This project used [Anaconda](https://www.anaconda.com/) as a way to manage dependencies. 
+The full package list can be found in `conda-packages.txt`.
