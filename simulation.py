@@ -6,7 +6,7 @@ the east-west position and T the north-south position
 after n steps.
 """
 
-from random import random
+from random import choice
 
 import numpy as np
 
@@ -25,14 +25,8 @@ def get_direction():
 	
 	:returns: the chosen directions changes in x and y
 	"""
-	r = random()
-	if r < .25:
-		return directions['S']
-	elif r < .5:
-		return directions['N']
-	elif r < .75:
-		return directions['E']
-	return directions['W']
+	dirs = "NSEW"
+	return directions[choice(dirs)]
 
 
 def change_position(curr_pos, change_in_pos):
