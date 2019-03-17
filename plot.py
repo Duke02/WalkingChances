@@ -26,7 +26,7 @@ def plot(n):
 	cax = divider.append_axes("right", size="5%", pad=0.05)
 
 	plt.colorbar(orientation='vertical', cax=cax)
-	fig.savefig('plots/plot-{}.png'.format(n), dpi=fig.dpi)
+	fig.savefig('plots/plot-{:03}.png'.format(n), dpi=fig.dpi)
 
 
 def main(max_n=10):
