@@ -10,6 +10,8 @@ from random import choice
 
 import numpy as np
 
+from options import Options
+
 # Directions (K -> V is initial of direction -> (dx, dy)
 directions = {
 	'S': (0, -1),
@@ -63,7 +65,9 @@ def get_chance_of_positions(n):
 	# into the counter without worrying about negative numbers.
 	starting_pos = (n, n)
 
-	total_num_of_sims = 10 ** 5
+	options = Options.get_options()
+
+	total_num_of_sims = options.num_of_rounds
 
 	counter = np.zeros(shape=(2 * n + 1, 2 * n + 1))
 

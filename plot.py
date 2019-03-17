@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 from simulation import get_chance_of_positions as get_chance
-
+from options import Options
 
 def plot(n):
 	"""
@@ -29,13 +29,13 @@ def plot(n):
 	fig.savefig('plots/plot-{:03}.png'.format(n), dpi=fig.dpi)
 
 
-def main(max_n=10):
+def main():
 	"""
 	The main function for this file. Makes max_n plots of the simulation.
-
-	:param max_n: The number of plots to generate (default 10)
 	"""
-	for n in range(1, max_n + 1):
+	options = Options.get_options()
+	
+	for n in range(1, options.num_of_sims + 1):
 		plot(n)
 
 
