@@ -1,9 +1,11 @@
 import argparse
 
 class Options:
-	
+
+
 	options = None
-	
+
+
 	@staticmethod
 	def generate_options():
 		arg_parser = argparse.ArgumentParser()
@@ -18,6 +20,7 @@ class Options:
 						default = 10,
 						help = "The number of simulations (and plots) to run. Default is 10.")
 		return arg_parser.parse_args()
+
 
 	@staticmethod
 	def get_options():
